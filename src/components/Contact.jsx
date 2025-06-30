@@ -12,7 +12,7 @@ const Contact = () => {
     {
       country: 'United Kingdom',
       address: '123 E-Commerce Street, London, EC1A 1BB',
-      phone: '+44 20 1234 5678',
+      phone: '+92 305 5823772',
       email: 'uk@mux-ECommerce.com',
       flag: '🇬🇧'
     },
