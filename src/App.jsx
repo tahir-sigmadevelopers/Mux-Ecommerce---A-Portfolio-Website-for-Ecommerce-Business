@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import ServicesPage from './components/ServicesPage'
 import Contact from './components/Contact'
+import Portfolio from './components/Portfolio'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<ServicesPage />} />
+          <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </Layout>
