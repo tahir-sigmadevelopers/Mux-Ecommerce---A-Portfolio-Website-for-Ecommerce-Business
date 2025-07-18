@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGlobe, FaUsers, FaChartLine } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useData } from '../context/DataContext';
 
 const About = () => {
+  const { teamMembers } = useData();
+
   return (
     <div>
       {/* Hero Section */}
@@ -15,7 +18,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
-              About <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">mux-ECommerce</span>
+              About <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Us</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -23,26 +26,25 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-300"
             >
-              Your premier e-commerce agency specializing in Amazon to eBay dropshipping, account audits, and FBA wholesale solutions across UK, Germany, and Italy.
+              Your trusted e-commerce experts for UK, Germany, and Italian marketplaces
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Company Story Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div 
+            <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-12"
+              className="text-3xl font-bold mb-8 text-center"
             >
-              <h2 className="text-3xl font-bold mb-4">Our Story</h2>
-              <div className="h-1 w-20 bg-blue-600 mx-auto"></div>
-            </motion.div>
+              Our <span className="text-blue-600">Story</span>
+            </motion.h2>
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -52,81 +54,69 @@ const About = () => {
               className="prose prose-lg max-w-none text-gray-700"
             >
               <p>
-                Founded in 2018, mux-ECommerce began with a simple mission: to help e-commerce entrepreneurs navigate the complex world of online marketplaces and achieve sustainable growth. What started as a small consultancy has grown into a comprehensive agency serving clients across the UK, Germany, and Italy.
+                Founded in 2018, Kasefnow began with a simple mission: to help businesses navigate the complex world of cross-border e-commerce in Europe's most lucrative markets - the UK, Germany, and Italy.
               </p>
+              
               <p>
-                Our founder, having experienced the challenges of e-commerce firsthand, recognized the need for specialized expertise in dropshipping, account management, and wholesale strategies. This insight led to the development of our core services, which have helped hundreds of businesses scale their operations and increase profitability.
+                Our founder, having experienced the challenges of European marketplace expansion firsthand, assembled a team of specialists with deep expertise in each market's unique requirements, consumer behaviors, and competitive landscapes.
               </p>
+              
               <p>
-                Today, mux-ECommerce is recognized as a leader in the e-commerce service industry, known for our data-driven approach, personalized strategies, and exceptional results. Our team of experts combines years of marketplace experience with cutting-edge techniques to deliver solutions that drive real business growth.
+                What started as a small consultancy has grown into a comprehensive e-commerce solutions provider, helping hundreds of businesses establish and scale their operations across multiple European marketplaces.
+              </p>
+              
+              <p>
+                Today, we pride ourselves on our data-driven approach, localized expertise, and proven track record of success. Our team combines technical knowledge with practical experience to deliver results that exceed our clients' expectations.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-3xl font-bold mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold mb-4">Our Values</h2>
-            <div className="h-1 w-20 bg-blue-600 mx-auto"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8 rounded-lg shadow-lg text-center"
-            >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaGlobe className="text-blue-600 text-2xl" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Global Expertise</h3>
-              <p className="text-gray-600">
-                We understand the nuances of different marketplaces and provide localized strategies for each region we serve.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white p-8 rounded-lg shadow-lg text-center"
-            >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaUsers className="text-blue-600 text-2xl" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Client Partnership</h3>
-              <p className="text-gray-600">
-                We see ourselves as partners in your success, working closely with you to achieve your business goals.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white p-8 rounded-lg shadow-lg text-center"
-            >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaChartLine className="text-blue-600 text-2xl" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Results-Driven</h3>
-              <p className="text-gray-600">
-                We measure our success by your success, focusing on tangible results and continuous improvement.
-              </p>
-            </motion.div>
+            Our <span className="text-blue-600">Values</span>
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Expertise",
+                description: "We maintain deep, specialized knowledge of each marketplace we operate in, staying ahead of trends and policy changes.",
+                icon: "🎯"
+              },
+              {
+                title: "Transparency",
+                description: "We believe in open communication and complete visibility into strategies, performance metrics, and results.",
+                icon: "🔍"
+              },
+              {
+                title: "Innovation",
+                description: "We continuously explore new technologies and methodologies to give our clients a competitive edge.",
+                icon: "💡"
+              }
+            ].map((value, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 + (index * 0.1) }}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -134,62 +124,94 @@ const About = () => {
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-3xl font-bold mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
-            <div className="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our team of e-commerce experts combines years of marketplace experience with innovative strategies to help your business thrive.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: 'Alex Thompson',
-                role: 'Founder & CEO',
-                image: 'https://randomuser.me/api/portraits/men/32.jpg'
-              },
-              {
-                name: 'Emma Roberts',
-                role: 'Head of Operations',
-                image: 'https://randomuser.me/api/portraits/women/44.jpg'
-              },
-              {
-                name: 'Michael Chen',
-                role: 'Lead Strategist',
-                image: 'https://randomuser.me/api/portraits/men/36.jpg'
-              },
-              {
-                name: 'Sophia Garcia',
-                role: 'Client Success Manager',
-                image: 'https://randomuser.me/api/portraits/women/65.jpg'
-              }
-            ].map((member, index) => (
-              <motion.div 
-                key={index}
+            Meet Our <span className="text-blue-600">Team</span>
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="text-center"
+                transition={{ duration: 0.6, delay: 0.2 + (index * 0.1) }}
+                whileHover={{ y: -10 }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="mb-4 relative mx-auto w-48 h-48 overflow-hidden rounded-full">
+                <div className="h-64 overflow-hidden">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
-                <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-blue-600">{member.role}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                  <p className="text-blue-600 mb-4">{member.role}</p>
+                  <p className="text-gray-600 mb-6">{member.bio}</p>
+                  <div className="flex space-x-4">
+                    <a 
+                      href={`mailto:${member.email}`}
+                      className="text-gray-500 hover:text-blue-600 transition-colors"
+                      aria-label={`Email ${member.name}`}
+                    >
+                      <FaEnvelope size={20} />
+                    </a>
+                    {member.linkedin && (
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-blue-600 transition-colors"
+                        aria-label={`LinkedIn profile of ${member.name}`}
+                      >
+                        <FaLinkedin size={20} />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl font-bold mb-6"
+            >
+              Ready to Work With Us?
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl mb-8 text-blue-100"
+            >
+              Let's discuss how our team can help grow your e-commerce business across Europe.
+            </motion.p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-3 bg-white text-blue-600 font-medium rounded-lg shadow-lg hover:shadow-white/30 transition-all duration-300"
+            >
+              Contact Us Today
+            </motion.button>
           </div>
         </div>
       </section>

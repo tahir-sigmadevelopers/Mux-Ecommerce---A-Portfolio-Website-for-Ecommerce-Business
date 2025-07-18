@@ -13,21 +13,21 @@ const Contact = () => {
       country: 'United Kingdom',
       address: '123 E-Commerce Street, London, EC1A 1BB',
       phone: '+92 305 5823772',
-      email: 'uk@mux-ECommerce.com',
+      email: 'info@kasefnow.com',
       flag: '🇬🇧'
     },
     {
       country: 'Germany',
       address: '456 Digital Avenue, Berlin, 10115',
       phone: '+49 30 1234 5678',
-      email: 'de@mux-ECommerce.com',
+      email: 'info@kasefnow.com',
       flag: '🇩🇪'
     },
     {
       country: 'Italy',
       address: '789 Online Plaza, Milan, 20121',
       phone: '+39 02 1234 5678',
-      email: 'it@mux-ECommerce.com',
+      email: 'info@kasefnow.com',
       flag: '🇮🇹'
     }
   ];
@@ -240,7 +240,7 @@ const Contact = () => {
                     <div className="flex items-center">
                       <input type="checkbox" id="consent" className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
                       <label htmlFor="consent" className="ml-2 block text-sm text-gray-700">
-                        I agree to receive communications from mux-ECommerce
+                        I agree to receive communications from Kasefnow
                       </label>
                     </div>
                     
@@ -292,7 +292,7 @@ const Contact = () => {
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="mux-ECommerce Office Locations"
+                title="Kasefnow Office Locations"
               ></iframe>
             </div>
           </motion.div>

@@ -1,53 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
+import { useData } from '../../context/DataContext';
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Sarah Johnson',
-      role: 'eBay Dropshipper',
-      location: 'London, UK',
-      image: 'https://randomuser.me/api/portraits/women/32.jpg',
-      content: 'mux-ECommerce transformed my dropshipping business. Their Amazon to eBay strategies increased my profit margins by 35% while reducing the time I spent managing listings. Exceptional service!',
-      rating: 5
-    },
-    {
-      id: 2,
-      name: 'Marco Bianchi',
-      role: 'FBA Seller',
-      location: 'Milan, Italy',
-      image: 'https://randomuser.me/api/portraits/men/45.jpg',
-      content: 'The FBA wholesale program was exactly what my business needed. They handled everything from sourcing to logistics, and my sales have doubled in just three months. Highly recommended!',
-      rating: 5
-    },
-    {
-      id: 3,
-      name: 'Anna Schmidt',
-      role: 'E-commerce Entrepreneur',
-      location: 'Berlin, Germany',
-      image: 'https://randomuser.me/api/portraits/women/68.jpg',
-      content: 'Their account audit saved my Amazon business. They identified critical issues I wasn\'t aware of and implemented solutions that not only resolved them but improved my overall performance.',
-      rating: 5
-    },
-    {
-      id: 4,
-      name: 'James Wilson',
-      role: 'Multi-channel Seller',
-      location: 'Manchester, UK',
-      image: 'https://randomuser.me/api/portraits/men/22.jpg',
-      content: 'Working with mux-ECommerce has been a game-changer. Their expertise across multiple marketplaces helped me expand internationally with confidence. The results speak for themselves!',
-      rating: 5
-    }
-  ];
-
+  const { testimonials } = useData();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || testimonials.length === 0) return;
     
     const interval = setInterval(() => {
       setDirection(1);
@@ -58,11 +21,13 @@ const Testimonials = () => {
   }, [testimonials.length, isPaused]);
 
   const handlePrev = () => {
+    if (testimonials.length === 0) return;
     setDirection(-1);
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
   const handleNext = () => {
+    if (testimonials.length === 0) return;
     setDirection(1);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
@@ -159,6 +124,10 @@ const Testimonials = () => {
       transition: { duration: 0.3 }
     }
   };
+
+  if (testimonials.length === 0) {
+    return null; // Don't render anything if there are no testimonials
+  }
 
   return (
     <section className="py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">

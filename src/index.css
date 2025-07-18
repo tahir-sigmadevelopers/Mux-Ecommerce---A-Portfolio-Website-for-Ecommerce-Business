@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* Force visibility of the n8n chat bubble */
+.n8n-chat-widget {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 999999 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+}

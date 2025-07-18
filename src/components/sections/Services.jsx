@@ -1,45 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaShoppingCart, FaChartLine, FaBoxes, FaSearch, FaAd } from 'react-icons/fa';
+import { FaShoppingCart, FaChartLine, FaBoxes, FaSearch, FaAd, FaIcons } from 'react-icons/fa';
+import { useData } from '../../context/DataContext';
 
 const Services = () => {
-  const services = [
-    {
-      id: 1,
-      icon: <FaShoppingCart className="text-4xl text-blue-500" />,
-      title: 'Amazon to eBay Dropshipping',
-      description: 'Leverage our expertise to seamlessly list Amazon products on eBay with optimal pricing strategies and automated order fulfillment.',
-      color: 'from-blue-500 to-cyan-400'
-    },
-    {
-      id: 2,
-      icon: <FaChartLine className="text-4xl text-purple-500" />,
-      title: 'Account Audit',
-      description: 'Comprehensive analysis of your e-commerce accounts to identify issues, opportunities, and actionable insights for growth.',
-      color: 'from-purple-500 to-pink-400'
-    },
-    {
-      id: 3,
-      icon: <FaBoxes className="text-4xl text-indigo-500" />,
-      title: 'FBA Wholesale (A-Z)',
-      description: 'Complete FBA wholesale solutions including product sourcing, supplier negotiations, logistics, and inventory management.',
-      color: 'from-indigo-500 to-blue-400'
-    },
-    {
-      id: 4,
-      icon: <FaSearch className="text-4xl text-rose-500" />,
-      title: 'Listing Optimization',
-      description: 'Enhance your product listings with SEO-optimized content, compelling images, and strategic pricing to maximize visibility and sales.',
-      color: 'from-rose-500 to-orange-400'
-    },
-    {
-      id: 5,
-      icon: <FaAd className="text-4xl text-amber-500" />,
-      title: 'PPC Management',
-      description: 'Data-driven advertising campaigns to increase visibility, drive traffic, and boost sales across all your marketplace accounts.',
-      color: 'from-amber-500 to-yellow-400'
+  const { services } = useData();
+
+  // Function to render the appropriate icon based on the icon name
+  const renderIcon = (iconName) => {
+    switch (iconName) {
+      case 'FaShoppingCart':
+        return <FaShoppingCart className="text-4xl text-blue-500" />;
+      case 'FaChartLine':
+        return <FaChartLine className="text-4xl text-purple-500" />;
+      case 'FaBoxes':
+        return <FaBoxes className="text-4xl text-indigo-500" />;
+      case 'FaSearch':
+        return <FaSearch className="text-4xl text-rose-500" />;
+      case 'FaAd':
+        return <FaAd className="text-4xl text-amber-500" />;
+      default:
+        return <FaIcons className="text-4xl text-gray-500" />;
     }
-  ];
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -151,7 +134,7 @@ const Services = () => {
                   variants={iconContainerVariants}
                   whileHover="hover"
                 >
-                  {service.icon}
+                  {renderIcon(service.icon)}
                 </motion.div>
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>

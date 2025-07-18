@@ -54,19 +54,19 @@ const Features = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
     }
   };
-  
+
   // Animation for icon background
   const iconBgVariants = {
     hidden: { scale: 0 },
-    visible: { 
+    visible: {
       scale: 1,
-      transition: { 
+      transition: {
         type: "spring",
         stiffness: 260,
         damping: 20
@@ -78,12 +78,12 @@ const Features = () => {
       transition: { duration: 0.3 }
     }
   };
-  
+
   // Animation for icon
   const iconVariants = {
     hidden: { rotate: -45, opacity: 0 },
-    visible: { 
-      rotate: 0, 
+    visible: {
+      rotate: 0,
       opacity: 1,
       transition: { delay: 0.2, duration: 0.4 }
     },
@@ -93,12 +93,12 @@ const Features = () => {
       transition: { duration: 0.5 }
     }
   };
-  
+
   // Text reveal animation
   const textRevealVariants = {
     hidden: { opacity: 0, y: 10 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.4, delay: 0.2 }
     }
@@ -108,26 +108,26 @@ const Features = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Why Choose <motion.span 
+            Why Choose <motion.span
               className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent inline-block"
-              animate={{ 
+              animate={{
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
               }}
-              transition={{ 
-                duration: 15, 
-                ease: 'linear', 
-                repeat: Infinity 
+              transition={{
+                duration: 15,
+                ease: 'linear',
+                repeat: Infinity
               }}
               style={{ backgroundSize: '200% auto' }}
             >
-              mux-ECommerce
+              Kasefnow
             </motion.span>
           </motion.h2>
           <motion.p
@@ -141,7 +141,7 @@ const Features = () => {
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
           variants={containerVariants}
           initial="hidden"
@@ -157,7 +157,7 @@ const Features = () => {
               custom={index}
             >
               <div className="flex-shrink-0 mr-4">
-                <motion.div 
+                <motion.div
                   className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100"
                   variants={iconBgVariants}
                 >
@@ -167,13 +167,13 @@ const Features = () => {
                 </motion.div>
               </div>
               <div>
-                <motion.h3 
+                <motion.h3
                   className="text-xl font-semibold mb-2"
                   variants={textRevealVariants}
                 >
                   {feature.title}
                 </motion.h3>
-                <motion.p 
+                <motion.p
                   className="text-gray-600"
                   variants={textRevealVariants}
                 >
@@ -189,35 +189,35 @@ const Features = () => {
             </motion.div>
           ))}
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.a 
-            href="#" 
+          <motion.a
+            href="#"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)"
             }}
             whileTap={{ scale: 0.95 }}
           >
             Learn More About Our Approach
-            <motion.svg 
-              className="ml-2 w-5 h-5" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
+            <motion.svg
+              className="ml-2 w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               initial={{ x: 0 }}
               animate={{ x: [0, 5, 0] }}
-              transition={{ 
-                duration: 1.5, 
-                ease: "easeInOut", 
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
                 repeat: Infinity,
                 repeatDelay: 1
               }}

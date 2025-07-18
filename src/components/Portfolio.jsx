@@ -1,72 +1,30 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaLink, FaSearch, FaShoppingCart, FaChartLine, FaBoxes } from 'react-icons/fa';
+import { useData } from '../context/DataContext';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
+  const { portfolioItems } = useData();
 
-  // Portfolio projects data
-  const projects = [
-    {
-      id: 1,
-      title: 'Amazon UK Dropshipping Store',
-      category: 'dropshipping',
-      image: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-      description: 'Automated Amazon to eBay dropshipping store generating £5,000+ monthly profit with 300+ active listings.',
-      tags: ['Amazon', 'eBay', 'Dropshipping', 'UK'],
-      icon: <FaShoppingCart className="text-blue-500" />
-    },
-    {
-      id: 2,
-      title: 'German Marketplace Audit',
-      category: 'audit',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-      description: 'Complete Amazon.de account audit that increased performance by 45% and resolved compliance issues.',
-      tags: ['Account Audit', 'Germany', 'Compliance'],
-      icon: <FaChartLine className="text-purple-500" />
-    },
-    {
-      id: 3,
-      title: 'Italian FBA Wholesale Operation',
-      category: 'wholesale',
-      image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-      description: 'End-to-end FBA wholesale solution for Italian marketplace with €120,000 monthly revenue.',
-      tags: ['FBA', 'Wholesale', 'Italy'],
-      icon: <FaBoxes className="text-indigo-500" />
-    },
-    {
-      id: 4,
-      title: 'UK Multi-Channel Integration',
-      category: 'dropshipping',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80',
-      description: 'Integrated multi-channel selling across Amazon, eBay, and Shopify with centralized inventory management.',
-      tags: ['Multi-channel', 'Integration', 'UK'],
-      icon: <FaLink className="text-green-500" />
-    },
-    {
-      id: 5,
-      title: 'German Brand Analytics',
-      category: 'audit',
-      image: 'https://images.unsplash.com/photo-1590845947670-c009801ffa74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80',
-      description: 'Comprehensive brand analytics and competitor research for a German electronics seller.',
-      tags: ['Analytics', 'Germany', 'Research'],
-      icon: <FaSearch className="text-amber-500" />
-    },
-    {
-      id: 6,
-      title: 'UK-Italy Cross-Border FBA',
-      category: 'wholesale',
-      image: 'https://images.unsplash.com/photo-1632507399869-65d193b6371f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-      description: 'Cross-border FBA wholesale operation between UK and Italian marketplaces with Pan-European FBA.',
-      tags: ['FBA', 'Cross-border', 'UK', 'Italy'],
-      icon: <FaBoxes className="text-rose-500" />
+  // Get icon component based on category
+  const getIconForCategory = (category) => {
+    switch (category) {
+      case 'dropshipping':
+        return <FaShoppingCart className="text-blue-500" />;
+      case 'audit':
+        return <FaChartLine className="text-purple-500" />;
+      case 'wholesale':
+        return <FaBoxes className="text-indigo-500" />;
+      default:
+        return <FaLink className="text-green-500" />;
     }
-  ];
+  };
 
   // Filter projects based on selected category
   const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+    ? portfolioItems 
+    : portfolioItems.filter(project => project.category === filter);
 
   // Animation variants
   const containerVariants = {
@@ -168,7 +126,7 @@ const Portfolio = () => {
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                      {project.icon}
+                      {getIconForCategory(project.category)}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, index) => (

@@ -6,20 +6,29 @@ import About from './components/About'
 import ServicesPage from './components/ServicesPage'
 import Contact from './components/Contact'
 import Portfolio from './components/Portfolio'
+import AdminRoutes from './components/admin/AdminRoutes'
 
 
 const App = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Layout>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<ServicesPage />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        {/* Admin Routes */}
+        <Route path="/admin/*" element={<AdminRoutes />} />
+        
+        {/* Public Routes */}
+        <Route path="/*" element={
+          <Layout>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/services' element={<ServicesPage />} />
+              <Route path='/portfolio' element={<Portfolio />} />
+              <Route path='/contact' element={<Contact />} />
+            </Routes>
+          </Layout>
+        } />
+      </Routes>
     </div>
   )
 }
