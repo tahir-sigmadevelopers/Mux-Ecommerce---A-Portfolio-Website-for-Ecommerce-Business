@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
-      <WhatsAppButton phoneNumber="923055823772" />
+      <WhatsAppButton phoneNumber="923200602522" />
     </div>
   );
 };
