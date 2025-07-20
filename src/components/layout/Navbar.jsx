@@ -73,7 +73,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Language Selector and Admin Link */}
+        {/* Language Selector */}
         <div className="hidden md:flex items-center space-x-4">
           <div className="flex items-center space-x-2 text-sm">
             <FaGlobe className="text-blue-600" />
@@ -83,13 +83,6 @@ const Navbar = () => {
               <option value="it">Italiano</option>
             </select>
           </div>
-          <Link 
-            to="/admin"
-            className="flex items-center space-x-1 text-sm text-gray-700 hover:text-blue-600 transition-colors"
-          >
-            <FaUserCog />
-            <span>Admin</span>
-          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -122,14 +115,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link 
-              to="/admin"
-              className="flex items-center space-x-2 text-gray-800 hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
-              onClick={() => setIsOpen(false)}
-            >
-              <FaUserCog />
-              <span>Admin Dashboard</span>
-            </Link>
             <div className="flex items-center space-x-2 py-2">
               <FaGlobe className="text-blue-600" />
               <select className="bg-transparent border-none outline-none">

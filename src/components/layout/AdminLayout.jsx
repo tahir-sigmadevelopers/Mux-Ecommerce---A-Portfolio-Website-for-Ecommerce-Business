@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   FaTachometerAlt, 
   FaFolderOpen, 
@@ -14,6 +14,7 @@ import {
 const AdminLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { name: 'Dashboard', path: '/admin', icon: <FaTachometerAlt /> },
@@ -25,6 +26,11 @@ const AdminLayout = ({ children }) => {
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('isAdminAuthenticated');
+    navigate('/admin/login');
   };
 
   return (
@@ -68,13 +74,13 @@ const AdminLayout = ({ children }) => {
           ))}
         </nav>
         <div className="absolute bottom-0 w-full p-4 border-t border-gray-700">
-          <Link
-            to="/"
-            className="flex items-center px-4 py-3 text-sm font-medium rounded-md text-gray-300 hover:bg-gray-700 hover:text-white"
+          <button
+            onClick={handleLogout}
+            className="flex items-center px-4 py-3 text-sm font-medium rounded-md text-gray-300 hover:bg-gray-700 hover:text-white w-full"
           >
             <span className="mr-3 h-4 w-4"><FaSignOutAlt /></span>
-            Back to Website
-          </Link>
+            Logout
+          </button>
         </div>
       </div>
 
