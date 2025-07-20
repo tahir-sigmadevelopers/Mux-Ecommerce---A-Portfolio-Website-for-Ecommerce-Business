@@ -36,8 +36,13 @@ const AdminLayout = ({ children }) => {
         } md:w-64 md:flex-shrink-0`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <Link to="/admin" className="text-xl font-bold text-white">
-            Kesefnow Admin
+          <Link to="/admin" className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Kesefnow Logo" 
+              className="h-8 mr-2" 
+            />
+            <span className="text-xl font-bold text-white">Admin</span>
           </Link>
           <button 
             className="md:hidden text-white focus:outline-none" 
@@ -84,9 +89,16 @@ const AdminLayout = ({ children }) => {
             >
               <FaBars />
             </button>
-            <h1 className="text-lg font-semibold text-gray-900">
-              Admin Dashboard
-            </h1>
+            <div className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Kesefnow Logo" 
+                className="h-6 mr-2 md:hidden" 
+              />
+              <h1 className="text-lg font-semibold text-gray-900">
+                Admin Dashboard
+              </h1>
+            </div>
             <div></div> {/* Placeholder for right side content */}
           </div>
         </header>

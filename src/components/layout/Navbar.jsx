@@ -46,9 +46,16 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            className="flex items-center"
           >
-            Kesefnow
+            <img 
+              src="/logo.png" 
+              alt="Kesefnow Logo" 
+              className="h-10 md:h-12 mr-2"
+            />
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hidden sm:inline-block">
+              Kesefnow
+            </span>
           </motion.div>
         </Link>
 

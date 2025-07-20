@@ -21,7 +21,14 @@ const Footer = () => {
             variants={fadeInUp}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Kesefnow</h3>
+            <div className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Kesefnow Logo" 
+                className="h-10 mr-3" 
+              />
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Kesefnow</h3>
+            </div>
             <p className="text-gray-300 max-w-xs">
               Your premier e-commerce agency specializing in Amazon to eBay dropshipping, account audits, and FBA wholesale solutions across UK, Germany, and Italy.
             </p>
@@ -125,9 +132,12 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Kesefnow. All rights reserved.
-          </p>
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Kesefnow Logo" className="h-6 mr-2" />
+            <p className="text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} Kesefnow. All rights reserved.
+            </p>
+          </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
               Privacy Policy
