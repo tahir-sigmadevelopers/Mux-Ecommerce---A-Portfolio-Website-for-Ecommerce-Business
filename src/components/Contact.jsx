@@ -12,7 +12,7 @@ const Contact = () => {
     {
       country: 'United Kingdom',
       address: '123 E-Commerce Street, London, EC1A 1BB',
-      phone: '+92 305 5823772',
+      phone: '+92 320 0602522',
       email: 'info@Kesefnow.com',
       flag: '🇬🇧'
     },
