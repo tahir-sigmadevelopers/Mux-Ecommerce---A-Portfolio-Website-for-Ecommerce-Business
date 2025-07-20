@@ -37,7 +37,7 @@ const AdminLayout = ({ children }) => {
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <Link to="/admin" className="text-xl font-bold text-white">
-            Kasefnow Admin
+            Kesefnow Admin
           </Link>
           <button 
             className="md:hidden text-white focus:outline-none" 

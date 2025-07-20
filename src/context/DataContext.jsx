@@ -48,7 +48,7 @@ const initialAboutContent = {
   story: {
     title: "Our Story",
     content: [
-      "Founded in 2018, Kasefnow began with a simple mission: to help businesses navigate the complex world of cross-border e-commerce in Europe's most lucrative markets - the UK, Germany, and Italy.",
+      "Founded in 2018, Kesefnow began with a simple mission: to help businesses navigate the complex world of cross-border e-commerce in Europe's most lucrative markets - the UK, Germany, and Italy.",
       "Our founder, having experienced the challenges of European marketplace expansion firsthand, assembled a team of specialists with deep expertise in each market's unique requirements, consumer behaviors, and competitive landscapes.",
       "What started as a small consultancy has grown into a comprehensive e-commerce solutions provider, helping hundreds of businesses establish and scale their operations across multiple European marketplaces.",
       "Today, we pride ourselves on our data-driven approach, localized expertise, and proven track record of success. Our team combines technical knowledge with practical experience to deliver results that exceed our clients' expectations."
@@ -144,7 +144,7 @@ const initialTestimonials = [
     role: 'eBay Dropshipper',
     location: 'London, UK',
     image: 'https://randomuser.me/api/portraits/women/32.jpg',
-    content: 'Kasefnow transformed my dropshipping business. Their Amazon to eBay strategies increased my profit margins by 35% while reducing the time I spent managing listings. Exceptional service!',
+    content: 'Kesefnow transformed my dropshipping business. Their Amazon to eBay strategies increased my profit margins by 35% while reducing the time I spent managing listings. Exceptional service!',
     rating: 5
   },
   {
@@ -171,7 +171,7 @@ const initialTestimonials = [
     role: 'Multi-channel Seller',
     location: 'Manchester, UK',
     image: 'https://randomuser.me/api/portraits/men/22.jpg',
-    content: 'Working with Kasefnow has been a game-changer. Their expertise across multiple marketplaces helped me expand internationally with confidence. The results speak for themselves!',
+    content: 'Working with Kesefnow has been a game-changer. Their expertise across multiple marketplaces helped me expand internationally with confidence. The results speak for themselves!',
     rating: 5
   }
 ];
@@ -184,7 +184,7 @@ const initialTeamMembers = [
     role: 'CEO & Founder',
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
     bio: 'E-commerce expert with 10+ years of experience in Amazon and eBay marketplaces. Specialized in UK and German markets.',
-    email: 'john@kasefnow.com',
+    email: 'john@Kesefnow.com',
     linkedin: 'https://linkedin.com/in/johndoe'
   },
   {
@@ -193,7 +193,7 @@ const initialTeamMembers = [
     role: 'Head of Operations',
     image: 'https://randomuser.me/api/portraits/women/2.jpg',
     bio: 'Operations specialist with expertise in streamlining e-commerce processes across multiple platforms.',
-    email: 'emma@kasefnow.com',
+    email: 'emma@Kesefnow.com',
     linkedin: 'https://linkedin.com/in/emmawilson'
   },
   {

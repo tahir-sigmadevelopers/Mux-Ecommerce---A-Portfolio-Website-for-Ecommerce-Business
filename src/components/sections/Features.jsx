@@ -127,7 +127,7 @@ const Features = () => {
               }}
               style={{ backgroundSize: '200% auto' }}
             >
-              Kasefnow
+              Kesefnow
             </motion.span>
           </motion.h2>
           <motion.p

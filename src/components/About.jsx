@@ -54,7 +54,7 @@ const About = () => {
               className="prose prose-lg max-w-none text-gray-700"
             >
               <p>
-                Founded in 2018, Kasefnow began with a simple mission: to help businesses navigate the complex world of cross-border e-commerce in Europe's most lucrative markets - the UK, Germany, and Italy.
+                Founded in 2018, Kesefnow began with a simple mission: to help businesses navigate the complex world of cross-border e-commerce in Europe's most lucrative markets - the UK, Germany, and Italy.
               </p>
               
               <p>
