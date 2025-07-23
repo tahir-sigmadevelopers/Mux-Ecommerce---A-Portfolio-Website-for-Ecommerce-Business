@@ -6,6 +6,8 @@ import About from './components/About'
 import ServicesPage from './components/ServicesPage'
 import Contact from './components/Contact'
 import Portfolio from './components/Portfolio'
+import BlogList from './components/blog/BlogList'
+import BlogPost from './components/blog/BlogPost'
 import AdminRoutes from './components/admin/AdminRoutes'
 
 
@@ -25,6 +27,10 @@ const App = () => {
               <Route path='/services' element={<ServicesPage />} />
               <Route path='/portfolio' element={<Portfolio />} />
               <Route path='/contact' element={<Contact />} />
+              
+              {/* Blog Routes */}
+              <Route path='/blog' element={<BlogList />} />
+              <Route path='/blog/:slug' element={<BlogPost />} />
             </Routes>
           </Layout>
         } />

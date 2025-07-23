@@ -6,6 +6,7 @@ import PortfolioManager from './PortfolioManager';
 import TestimonialsManager from './TestimonialsManager';
 import TeamManager from './TeamManager';
 import ServicesManager from './ServicesManager';
+import BlogAdmin from '../blog/BlogAdmin';
 import Login from './Login';
 
 const isAuthenticated = () => localStorage.getItem('isAdminAuthenticated') === 'true';
@@ -33,6 +34,9 @@ const AdminRoutes = () => {
                 <Route path="/testimonials" element={<TestimonialsManager />} />
                 <Route path="/team" element={<TeamManager />} />
                 <Route path="/services" element={<ServicesManager />} />
+                <Route path="/blog" element={<BlogAdmin />} />
+                <Route path="/blog/:action" element={<BlogAdmin />} />
+                <Route path="/blog/:action/:id" element={<BlogAdmin />} />
               </Routes>
             </AdminLayout>
           </RequireAuth>

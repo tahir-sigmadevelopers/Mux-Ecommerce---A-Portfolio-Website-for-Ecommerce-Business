@@ -8,7 +8,8 @@ import {
   FaBars, 
   FaTimes,
   FaSignOutAlt,
-  FaCogs
+  FaCogs,
+  FaBlog
 } from 'react-icons/fa';
 
 const AdminLayout = ({ children }) => {
@@ -22,6 +23,7 @@ const AdminLayout = ({ children }) => {
     { name: 'Portfolio', path: '/admin/portfolio', icon: <FaFolderOpen /> },
     { name: 'Testimonials', path: '/admin/testimonials', icon: <FaComments /> },
     { name: 'Team', path: '/admin/team', icon: <FaUsers /> },
+    { name: 'Blog', path: '/admin/blog', icon: <FaBlog /> },
   ];
 
   const toggleSidebar = () => {
@@ -63,7 +65,7 @@ const AdminLayout = ({ children }) => {
               key={item.name}
               to={item.path}
               className={`group flex items-center px-4 py-3 text-sm font-medium rounded-md mb-1 ${
-                location.pathname === item.path
+                (location.pathname === item.path || location.pathname.startsWith(item.path + '/'))
                   ? 'bg-gray-900 text-white'
                   : 'text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}

@@ -56,4 +56,48 @@
       <image:title>Contact Kesefnow - Get in Touch With Us</image:title>
     </image:image>
   </url>
+  
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://kesefnow.com/blog</loc>
+    <lastmod>2025-07-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kesefnow.com/blog-og-image.jpg</image:loc>
+      <image:title>Blog - E-commerce Insights and Strategies</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://kesefnow.com/blog/getting-started-with-ecommerce</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1661956602868-6ae368943878</image:loc>
+      <image:title>Getting Started with E-commerce: A Beginner's Guide</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kesefnow.com/blog/amazon-marketplace-strategies</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1614849286521-4c58b2f0ff15</image:loc>
+      <image:title>Amazon Marketplace Strategies for 2025</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kesefnow.com/blog/european-ecommerce-markets-guide</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3</image:loc>
+      <image:title>A Complete Guide to European E-commerce Markets</image:title>
+    </image:image>
+  </url>
 </urlset> 
