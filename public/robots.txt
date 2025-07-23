@@ -1,0 +1,32 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin routes and any other private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow Googlebot to access everything
+User-agent: Googlebot
+Allow: /
+
+# Allow Googlebot-Image to access all images
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Bingbot full access
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of search result pages (prevent duplicate content)
+Disallow: /*?q=*
+Disallow: /*?s=*
+Disallow: /*?search=*
+
+# Crawl-delay for specific bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://kesefnow.com/sitemap.xml 

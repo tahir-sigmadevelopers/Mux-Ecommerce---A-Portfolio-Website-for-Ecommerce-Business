@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+  <url>
+    <loc>https://kesefnow.com/</loc>
+    <lastmod>2025-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kesefnow.com/homepage-og-image.jpg</image:loc>
+      <image:title>Kesefnow - Professional Web Development Services</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kesefnow.com/about</loc>
+    <lastmod>2025-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kesefnow.com/about-og-image.jpg</image:loc>
+      <image:title>About Kesefnow - Our Team and Story</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kesefnow.com/services</loc>
+    <lastmod>2025-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kesefnow.com/services-og-image.jpg</image:loc>
+      <image:title>Our Services - Web Development and Design</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kesefnow.com/portfolio</loc>
+    <lastmod>2025-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kesefnow.com/portfolio-og-image.jpg</image:loc>
+      <image:title>Portfolio - Our Web Development Projects</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kesefnow.com/contact</loc>
+    <lastmod>2025-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kesefnow.com/contact-og-image.jpg</image:loc>
+      <image:title>Contact Kesefnow - Get in Touch With Us</image:title>
+    </image:image>
+  </url>
+</urlset> 

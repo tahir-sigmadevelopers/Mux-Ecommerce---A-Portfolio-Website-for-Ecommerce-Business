@@ -5,13 +5,16 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { DataProvider } from './context/DataContext'
+import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <DataProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </DataProvider>
+    <HelmetProvider>
+      <DataProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </DataProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

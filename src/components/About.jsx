@@ -2,12 +2,65 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { useData } from '../context/DataContext';
+import SEO from './SEO';
 
 const About = () => {
   const { teamMembers } = useData();
+  
+  // Define About page-specific SEO data
+  const aboutSeoData = {
+    title: 'About Us - Kesefnow | Professional Web Development Team',
+    description: 'Learn about Kesefnow, your trusted e-commerce experts for UK, Germany, and Italian marketplaces. Discover our story, values, and meet our professional team.',
+    keywords: 'about Kesefnow, web development team, e-commerce experts, European marketplace specialists, professional web services',
+    ogType: 'website',
+    ogImage: '/about-og-image.jpg',
+    modifiedTime: '2025-07-23T00:00:00Z'
+  };
+  
+  // Structured data for Organization
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kesefnow",
+    "url": "https://kesefnow.com",
+    "logo": "https://kesefnow.com/logo.png",
+    "description": "Your trusted e-commerce experts for UK, Germany, and Italian marketplaces",
+    "foundingDate": "2018",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Kesefnow Founder"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Your Country",
+      "addressLocality": "Your City"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+923200602522",
+      "contactType": "customer service",
+      "email": "contact@kesefnow.com"
+    },
+    "sameAs": [
+      "https://www.facebook.com/kesefnow",
+      "https://www.linkedin.com/company/kesefnow",
+      "https://twitter.com/kesefnow",
+      "https://www.instagram.com/kesefnow"
+    ]
+  };
 
   return (
     <div>
+      {/* Add SEO for About page */}
+      <SEO {...aboutSeoData}>
+        {/* Add JSON-LD structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </SEO>
+      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-blue-900 text-white">
         <div className="container mx-auto px-4">
