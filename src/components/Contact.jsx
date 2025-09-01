@@ -70,7 +70,8 @@ const Contact = () => {
   // Send data to WhatsApp
   const sendToWhatsApp = () => {
     // WhatsApp phone number (with country code)
-    const whatsappNumber = '+923200602522'; // Replace with your actual WhatsApp number
+    const whatsappNumber = '+923241553013'; // Replace with your actual WhatsApp number
+    // const whatsappNumber = '+923200602522'; // Replace with your actual WhatsApp number
     
     // Format the message
     const message = `
