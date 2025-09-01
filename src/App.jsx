@@ -9,6 +9,9 @@ import Portfolio from './components/Portfolio'
 import BlogList from './components/blog/BlogList'
 import BlogPost from './components/blog/BlogPost'
 import AdminRoutes from './components/admin/AdminRoutes'
+import WhatWeDo from './components/partner/WhatWeDo'
+import BecomePartner from './components/partner/BecomePartner'
+import LeadGeneration from './components/partner/LeadGeneration'
 
 
 const App = () => {
@@ -31,6 +34,11 @@ const App = () => {
               {/* Blog Routes */}
               <Route path='/blog' element={<BlogList />} />
               <Route path='/blog/:slug' element={<BlogPost />} />
+              
+              {/* Partner Routes */}
+              <Route path='/partner/what-we-do' element={<WhatWeDo />} />
+              <Route path='/partner/become-partner' element={<BecomePartner />} />
+              <Route path='/partner/lead-generation' element={<LeadGeneration />} />
             </Routes>
           </Layout>
         } />

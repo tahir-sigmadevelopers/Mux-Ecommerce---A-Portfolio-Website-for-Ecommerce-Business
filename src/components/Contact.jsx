@@ -1,36 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
-
-  const offices = [
-    {
-      country: 'United Kingdom',
-      address: '123 E-Commerce Street, London, EC1A 1BB',
-      phone: '+92 320 0602522',
-      email: 'info@Kesefnow.com',
-      flag: '🇬🇧'
-    },
-    {
-      country: 'Germany',
-      address: '456 Digital Avenue, Berlin, 10115',
-      phone: '+49 30 1234 5678',
-      email: 'info@Kesefnow.com',
-      flag: '🇩🇪'
-    },
-    {
-      country: 'Italy',
-      address: '789 Online Plaza, Milan, 20121',
-      phone: '+39 02 1234 5678',
-      email: 'info@Kesefnow.com',
-      flag: '🇮🇹'
-    }
-  ];
 
   return (
     <div>
@@ -73,43 +49,24 @@ const Contact = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
                 <p className="text-gray-600 mb-8">
-                  Reach out to us through any of our offices or fill out the form, and our team will get back to you within 24 hours.
+                  Fill out the form, and our team will get back to you within 24 hours.
                 </p>
                 
-                <div className="space-y-8">
-                  {offices.map((office, index) => (
-                    <motion.div 
-                      key={index}
-                      className="p-6 bg-gray-50 rounded-lg"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: 0.1 * index }}
-                    >
-                      <div className="flex items-center mb-4">
-                        <span className="text-2xl mr-2">{office.flag}</span>
-                        <h3 className="text-xl font-semibold">{office.country}</h3>
-                      </div>
-                      <div className="space-y-3 text-gray-600">
-                        <div className="flex items-start">
-                          <FaMapMarkerAlt className="text-blue-600 mt-1 mr-3" />
-                          <span>{office.address}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <FaPhone className="text-blue-600 mr-3" />
-                          <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="hover:text-blue-600 transition-colors">
-                            {office.phone}
-                          </a>
-                        </div>
-                        <div className="flex items-center">
-                          <FaEnvelope className="text-blue-600 mr-3" />
-                          <a href={`mailto:${office.email}`} className="hover:text-blue-600 transition-colors">
-                            {office.email}
-                          </a>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                <div className="p-6 bg-gray-50 rounded-lg mb-8">
+                  <div className="space-y-3 text-gray-600">
+                    <div className="flex items-center">
+                      <FaPhone className="text-blue-600 mr-3" />
+                      <a href="tel:+923200602522" className="hover:text-blue-600 transition-colors">
+                        +92 320 0602522
+                      </a>
+                    </div>
+                    <div className="flex items-center">
+                      <FaEnvelope className="text-blue-600 mr-3" />
+                      <a href="mailto:info@Kesefnow.com" className="hover:text-blue-600 transition-colors">
+                        info@kesefnow.com
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-8">
@@ -260,44 +217,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4">Our Global Presence</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              With offices across the UK, Germany, and Italy, we provide localized e-commerce expertise for businesses of all sizes.
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
-          >
-            <div className="aspect-w-16 aspect-h-9">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9931.221252756262!2d-0.12301236442974554!3d51.51486797963491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slondon!5e0!3m2!1sen!2suk!4v1656426599273!5m2!1sen!2suk" 
-                width="100%" 
-                height="500" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kesefnow Office Locations"
-              ></iframe>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
     </div>
   );
 };

@@ -162,10 +162,10 @@ const Portfolio = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '50+', label: 'Projects Completed' },
-              { value: '£2.5M+', label: 'Revenue Generated' },
-              { value: '3', label: 'Countries Served' },
-              { value: '98%', label: 'Client Satisfaction' }
+              { value: '30+', label: 'Projects Completed' },
+              { value: '£1M+', label: 'Revenue Generated' },
+              { value: '4', label: 'Countries Served' },
+              { value: '96%', label: 'Client Satisfaction' }
             ].map((stat, index) => (
               <motion.div 
                 key={index}
@@ -218,13 +218,16 @@ const Portfolio = () => {
             >
               Let's discuss how we can help grow your business across UK, Germany, and Italian marketplaces.
             </motion.p>
-            <motion.button
+            <motion.a
+              href="https://wa.me/923200602522"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
             >
               Schedule a Consultation
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </section>

@@ -205,10 +205,10 @@ const Hero = () => {
             variants={itemVariants}
           >
             {[
-              { value: "3", label: "Countries Served" },
-              { value: "150+", label: "Clients" },
-              { value: "$5M+", label: "Revenue Generated" },
-              { value: "98%", label: "Client Satisfaction" }
+              { value: "4", label: "Countries Served" },
+              { value: "30+", label: "Clients" },
+              { value: "£1M+", label: "Revenue Generated" },
+              { value: "96%", label: "Client Satisfaction" }
             ].map((stat, index) => (
               <motion.div 
                 key={index}
